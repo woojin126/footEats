@@ -1,11 +1,29 @@
 # footEats
+
+* 요구사항에 따른 API설계와 Test Code 
+# 스케쥴링
+2021/11/29 - 2021/12/03
+
+* 11/29: API 설계, Entity 설계
+* 11/30: Restaurants Entity, API 등록, 조회 구현 완료  
+* 12/01: Foods Entity , API조회 등록 구현후 exception 처리 
+* 12/02: Ordered Entity, OrderFood Entity 구현, API 주문조회 , 주문 등록 구현후, exception 처리
+
+# 개발 환경
+* BACK-END:Spring Web, Spring DATA JPA, JUNIT5, Lombok
+* DataBase: Mysql
+* Server:AWS EC2, DB:Redis 배포
+* domain:가비아, 현재 구동 중지상태
+
+# 추후 계획
+* 뭉쳐있고, 재사용되는 코드 메서드로 뽑아내어 리팩토링예정
 **[요구사항]**
 
 1. 음식점 등록 및 조회
 2. 음식 등록 및 메뉴판 조회
 3. 주문하기
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d02b62b2-a4b1-4225-985b-06c4566263b9/Untitled.png)
+![image](https://user-images.githubusercontent.com/25544668/144414476-e0bc6681-8104-4142-9cd1-a08403e1f0c7.png)
 
 1. 음식점 등록 및 조회
     - 음식점 정보 입력받아 등록
@@ -74,3 +92,8 @@
         - 그동안 성공한 모든 주문 요청을 조회 가능
     
     [API 명세서](https://www.notion.so/50187efd7a894d37849786d49bee96b0)
+    
+    
+    # 테이블 설계 구조
+    ![image](https://user-images.githubusercontent.com/25544668/144416646-959e4dd6-3dc1-4326-af74-fa0f2bbad364.png)
+
