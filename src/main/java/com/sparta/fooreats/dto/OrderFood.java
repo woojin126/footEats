@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 public class OrderFood {
     private Long orderId;
     private String name;
-    private int quantity;
     private int price;
+    private int quantity;
+
 }
