@@ -96,5 +96,6 @@
     
     
     # 테이블 설계 구조
-    ![image](https://user-images.githubusercontent.com/25544668/144416646-959e4dd6-3dc1-4326-af74-fa0f2bbad364.png)
+   
+![image](https://user-images.githubusercontent.com/25544668/144417197-55883d8f-c824-472f-a315-29c5c11bfe2d.png)
 
