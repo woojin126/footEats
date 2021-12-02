@@ -1,10 +1,10 @@
 package com.sparta.fooreats.domain;
 
-
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-class RestaurantsTest {
+class RestaurantIntegrationTest {
     @Autowired
     private TestRestTemplate restTemplate;
 
@@ -349,7 +349,5 @@ class RestaurantsTest {
         private String name;
         private int minOrderPrice;
         private int deliveryFee;
-
-
     }
 }
