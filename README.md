@@ -44,7 +44,7 @@
             2. DB 테이블 ID (id)  
             
     
-    [API 명세서](https://www.notion.so/ad685d24a945406290c8649dcfb93e99)
+  ![image](https://user-images.githubusercontent.com/25544668/144416960-360f69ba-8cba-4729-a605-308057fbef2b.png)
     
 2. 음식 등록 및 메뉴판 조회
     - 음식점 ID 및 음식 정보 입력받아 등록
@@ -63,7 +63,7 @@
             2. DB 테이블 ID (id)
             
     
-    [API 명세서](https://www.notion.so/065b1715462a4b259ecfc993da90f7c7)
+    ![image](https://user-images.githubusercontent.com/25544668/144417026-3a91b15d-69ed-4aad-9cb7-e0f7effb4bc4.png)
     
 3. 주문 요청하기 및 주문 조회
     - 주문 요청 시 배달 음식점 및 음식 정보 입력받음
@@ -92,7 +92,7 @@
     - 주문 조회
         - 그동안 성공한 모든 주문 요청을 조회 가능
     
-    [API 명세서](https://www.notion.so/50187efd7a894d37849786d49bee96b0)
+![image](https://user-images.githubusercontent.com/25544668/144417094-824fcf40-2912-4007-b3a8-6f60d98f26a2.png)
     
     
     # 테이블 설계 구조
