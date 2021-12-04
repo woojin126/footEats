@@ -2,6 +2,7 @@ package com.sparta.fooreats.controller;
 
 import com.sparta.fooreats.dto.OrderRequestDto;
 import com.sparta.fooreats.dto.ResponseOrdered;
+import com.sparta.fooreats.repository.OrderRepository;
 import com.sparta.fooreats.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +18,8 @@ import java.util.List;
 public class OrderController {
 
     private final OrderService orderService;
+    private final OrderRepository orderRepository;
+
 
     @PostMapping("/order/request")
     public ResponseOrdered postOrdered(@RequestBody OrderRequestDto orderRequestDto){
@@ -27,4 +30,5 @@ public class OrderController {
     public List<ResponseOrdered> findAllByOrdered(){
         return  orderService.findAllByOrderInfo();
     }
+
 }
