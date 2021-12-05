@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @Entity
 public class Foods {
-
+//푸드에 김우진
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
