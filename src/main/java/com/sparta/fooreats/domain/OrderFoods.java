@@ -29,13 +29,14 @@ public class OrderFoods {
     @JoinColumn(name = "food_Id", nullable = false)
     private Foods foods;
 
-    public static OrderFoods createOrderFood(Foods foods,int price, int quantity,Ordered ordered){
+    public static OrderFoods createOrderFood(Foods foods, int quantity,Ordered ordered){
+
         if (quantity < 1 || quantity > 100)
             throw new IllegalArgumentException("수량은 1미만, 100 이상이 될 수 없습니다.");
         OrderFoods orderFoods = new OrderFoods();
         orderFoods.setFoods(foods);
         orderFoods.setOrders(ordered);
-        orderFoods.setTotalPrice(price * quantity);
+        orderFoods.setTotalPrice(orderFoods.foods.priceCarditionQuantity(quantity));
         orderFoods.setQuantity(quantity);
         return orderFoods;
     }
