@@ -38,18 +38,19 @@ public class OrderService {
         for (OrderRequestDto.FoodsDtos food : foods) {
             Foods foodOne = foodsRepository.findByIdAndRestaurant(food.getId(), restaurants).orElseThrow(() -> new IllegalArgumentException("레스토랑 아이디가 존재하지 않습니다."));
             //주문 상품 생성
-            OrderFoods orderFood = OrderFoods.createOrderFood(foodOne, foodOne.getPrice(), food.getQuantity(), ordered);
+            OrderFoods orderFood = OrderFoods.createOrderFood(foodOne, food.getQuantity(), ordered);
             //주문 생성
             orderFoods.add(orderFood);
         }
         //주문한 메뉴 총 가격
         int allMoney = orderFoods.stream().mapToInt(OrderFoods::getTotalPrice).sum();
+
         //주문한 메뉴와 배달비를 포함한 총 가격
         int deliveryAndFoodPrice = allMoney + (restaurants.getDeliveryFee());
         if (restaurants.getMinOrderPrice() > allMoney)
             throw new IllegalArgumentException("주문 음식 가격들의 총 합 이 주문 음식점의 최소주문 가격 을 넘지 안습니다");
 
-        ordered.setOrderTotalPrice(deliveryAndFoodPrice);
+        ordered.addTotalPrice(deliveryAndFoodPrice);
         orderRepository.save(ordered);
         //레스토랑 아이디에 해당하는 모든 주문 아이디 가져오기
         List<Long> orderIdCollect = orderRepository.findOrderIdCollect(restaurants.getId());
