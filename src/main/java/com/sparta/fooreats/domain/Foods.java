@@ -30,5 +30,9 @@ public class Foods {
         this.price = price;
         this.restaurant = restaurant;
     }
+
+    public int priceCarditionQuantity(int quantity){
+        return price * quantity;
+    }
 }
 
