@@ -29,14 +29,14 @@ public class Ordered {
 
 
     public static Ordered orders(Restaurants restaurants, List<OrderFoods> orderFood) {
-        int sum = orderFood.stream().mapToInt(OrderFoods::getTotalPrice).sum();
         Ordered ordered = new Ordered();
         ordered.setOrderFoods(orderFood);
         ordered.setRestaurant(restaurants);
-        ordered.setOrderTotalPrice(sum);
         return ordered;
     }
 
 
-
+    public void addTotalPrice(int orderTotalPrice) {
+        this.orderTotalPrice = orderTotalPrice;
+    }
 }
